@@ -1,6 +1,6 @@
 import UIKit
 
-class Refeicao {
+class Refeicao: NSObject {
     
     // MARK: - Atributos
     
