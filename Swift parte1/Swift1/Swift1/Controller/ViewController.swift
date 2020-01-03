@@ -9,15 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var nomeTextField: UITextField!
-    @IBOutlet weak var felicidadeTextField: UITextField!
+    
+    @IBOutlet var nomeTextField: UITextField?
+    @IBOutlet weak var felicidadeTextField: UITextField?
     
     @IBAction func adicionar(_sender: Any){
-        let nome = nomeTextField.text
-        let felicidade = felicidadeTextField.text
         
-        print("Comi \(nome) e minha nota para a comida foi \(felicidade)")
+        guard let refeicaoNome = nomeTextField?.text else { return }
+        guard let felicidadeRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeRefeicao) else { return }
+        
+        let refeicao = Refeicao(nome: refeicaoNome, felicidade: felicidade)
+        
+         print("Comi \(refeicao.nome) e minha nota para a comida foi \(refeicao.felicidade)")
+    
+        
     }
-
+    
 } // end ViewController
