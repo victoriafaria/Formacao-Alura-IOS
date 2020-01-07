@@ -20,9 +20,8 @@ class ViewController: UIViewController {
         
         let refeicao = Refeicao(nome: refeicaoNome, felicidade: felicidade)
         
-         print("Comi \(refeicao.nome) e minha nota para a comida foi \(refeicao.felicidade)")
+         print("Comi \(refeicao.nome) e minha avalição para a comida foi \(refeicao.felicidade)")
     
-        
     }
     
 } // end ViewController
